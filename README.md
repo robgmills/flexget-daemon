@@ -22,6 +22,7 @@ Defaults, override at your own peril:
 ```yaml
 flexget_bind_host: 127.0.0.1
 flexget_bind_port: 3539
+flexget_base_path: flexget
 flexget_enable_ui: yes
 flexget_enable_api: yes
 

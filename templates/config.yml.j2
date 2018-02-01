@@ -1,8 +1,9 @@
 web_server:
   bind: {{ flexget_bind_host }}
   port: {{ flexget_bind_port }}
-api:    {{ flexget_enable_api }}
-webui:  {{ flexget_enable_ui }}
+{% if flexget_base_url is defined %}
+  base_url: {{ flexget_base_url }}
+{% endif %}
 
 # write out schedules in proper format
 {{ {'schedules':flexget_schedules} | to_nice_yaml }}
